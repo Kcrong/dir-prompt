@@ -53,16 +53,14 @@ func listFiles(root string, regex *regexp.Regexp) []string {
 }
 
 func printFiles(files []string) {
-
 	for i, file := range files {
 		content, err := os.ReadFile(file)
 		if err != nil {
-			fmt.Println("Error reading file:", file, err)
 			continue
 		}
 		if i > 0 {
 			fmt.Println(delimiter)
 		}
-		fmt.Printf("Filename: %s\n%s\n", file, string(content))
+		fmt.Printf("Filename: %s\n%s\n", file, string(content[:]))
 	}
 }
