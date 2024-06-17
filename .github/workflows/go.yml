@@ -22,7 +22,7 @@ jobs:
         go-version: '1.22'
 
     - name: Build
-      run: go build -o build/main -v cmd/main.go
+      run: go build -o build/main -v cmd/dirprompt/main.go
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4.3.3
