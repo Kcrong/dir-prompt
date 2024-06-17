@@ -7,4 +7,12 @@ Go-based tool that scans the current directory, parses files, and outputs their 
 **LLM Prompt Formatting**: Outputs filenames and contents in a structured format ideal for LLM inputs.
 
 ## Usage
-TBD
+### Installation
+```bash
+go install github.com/Kcrong/dirprompt/cmd/dirprompt@main
+```
+
+### Run
+```bash
+dirprompt --regex ".*.go" --root "./"
+```
